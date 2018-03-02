@@ -39,15 +39,31 @@ extension UIImage {
 
     let minBytesPerRow = min(cgImage.bytesPerRow, image.cgImage!.bytesPerRow)
     let referenceImageSizeBytes = Int(referenceImageSize.height) * minBytesPerRow
-    
-    // Do a lexicographically comparsion using the object representations, not the object values (byte array check)
-    // @Shameless copied from https://github.com/facebookarchive/ios-snapshot-test-case/blob/da629211c17a4c507e2e866e8a19ed3122af770b/FBSnapshotTestCase/Categories/UIImage%2BCompare.m#L101
-    let equals = memcmp(referenceImageContext.data!, imageContext.data!, referenceImageSizeBytes)
-    
-    let imagesAreEqual = normalizedImage! == image.normalizedImage! && equals == 0
-    if !imagesAreEqual {
-      throw CompareError.notEquals
+
+    var differentPixels = 0
+    var differenceSum = 0
+
+    // workaround: compare with tolerance
+    let referenceData = referenceImageContext.data!
+    let imageData = imageContext.data!
+    for byteOffset in 0..<referenceImageSizeBytes {
+        let referenceBytes = referenceData.load(fromByteOffset: byteOffset, as: UInt8.self)
+        let imageBytes = imageData.load(fromByteOffset: byteOffset, as: UInt8.self)
+        if referenceBytes != imageBytes {
+            let diff = abs(Int(referenceBytes) - Int(imageBytes))
+            if diff > 3 {
+                differentPixels += 1
+                differenceSum += diff
+            }
+        }
     }
+
+    if differentPixels > 15 {
+        throw CompareError.notEquals
+    }
+
+
+    // TODO: image normalization removed: let imagesAreEqual = normalizedImage! == image.normalizedImage! && equals == 0
   }
   
   private func compareMetadata(from context1: CGContext, matches context2: CGContext) throws {
