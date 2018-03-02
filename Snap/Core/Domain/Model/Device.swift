@@ -5,7 +5,9 @@ public enum Device: String {
   case iPhoneX
   case iPadMini        // iPad Mini 2, iPad Mini 3, iPad Mini 4
   case iPadAir         // iPad 3, iPad 4, iPad Air, iPad Air 2, 9.7-inch iPad Pro
+  case iPadAir_Landscape
   case iPadPro105
+  case iPadPro105_Landscape
   case iPadPro129      // 12.9-inch iPad Pro
 }
 
