@@ -10,7 +10,7 @@ func addImagesForRenderedViews(_ view: UIView) -> [UIView] {
   func add(_ image: UIImage) -> [UIView] {
     let imageView = UIImageView(image: image)
     imageView.frame = view.bounds
-    view.addSubview(imageView)
+    view.insertSubview(imageView, at: 0)
     return [imageView]
   }
   
