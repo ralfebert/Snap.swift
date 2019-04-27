@@ -29,6 +29,8 @@ extension UIView {
   /// Extract image data with the whole hierarchy from `UIView`
   func render() -> UIImage? {
 
+    self.layoutIfNeeded()
+    
     // SpriteKit refuses to draw its hierarchy: render an image of the spritekit view and add it to the view to be able to capture it
     let addedViews = addImagesForRenderedViews(self)
     defer { addedViews.forEach { $0.removeFromSuperview() } }

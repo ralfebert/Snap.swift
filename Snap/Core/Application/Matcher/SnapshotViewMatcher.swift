@@ -71,7 +71,6 @@ struct SnapshotViewMatcher: ViewMatcher {
     let updatedView = self.view
     if let device = updatedTestTarget.device {
       updatedView.frame = CGRect(origin: .zero, size: device.size)
-      updatedView.layoutIfNeeded()
     }
     guard isRecording else {
       compareImages.compare(with: updatedView, testTarget: updatedTestTarget)
