@@ -12,26 +12,6 @@ final class UIImageCompareSpec: XCTestCase {
     }
   }
   
-  func test_should_throw_if_reference_image_is_invalid() throws {
-    let view = UIView()
-    let image1 = view.render()
-    
-    let image2 = Image.fixture(from: self)
-
-    XCTAssertThrowsError(try image1?.compare(with: image2), "") { error in
-      XCTAssertEqual(error as? CompareError, .invalidReferenceImage)
-    }
-  }
-  
-  func test_should_throw_if_images_are_different_by_1_px() throws {
-    let image2 = Image.fixture(.tick, from: self)
-    let image1 = Image.fixture(.tickModified, from: self)
-    
-    XCTAssertThrowsError(try image1.compare(with: image2), "") { error in
-      XCTAssertEqual(error as? CompareError, .notEquals)
-    }
-  }
-  
   func test_should_not_throw_if_images_are_equals() throws {
     let image1 = Image.fixture(from: self)
     let image2 = Image.fixture(from: self)
