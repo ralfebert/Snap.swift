@@ -3,6 +3,7 @@ public enum Device: String {
   case iPhone8         // iPhone 6, iPhone 6s, iPhone 7, iPhone 8
   case iPhone8Plus     // iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus
   case iPhoneX
+  case iPhoneXSMax
   case iPadMini        // iPad Mini 2, iPad Mini 3, iPad Mini 4
   case iPadAir         // iPad 3, iPad 4, iPad Air, iPad Air 2, 9.7-inch iPad Pro
   case iPadAir_Landscape

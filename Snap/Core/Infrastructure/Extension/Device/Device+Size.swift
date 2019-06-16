@@ -7,6 +7,7 @@ extension Device {
     case .iPhone8: return CGSize(width: 375, height: 667)
     case .iPhone8Plus: return CGSize(width: 414, height: 736)
     case .iPhoneX: return CGSize(width: 375, height: 812)
+    case .iPhoneXSMax: return CGSize(width: 414, height: 896)
     case .iPadMini: return CGSize(width: 768, height: 1024)
     case .iPadAir: return CGSize(width: 768, height: 1024)
     case .iPadAir_Landscape: return CGSize(width: 1024, height: 768)
