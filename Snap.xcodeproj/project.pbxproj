@@ -570,12 +570,12 @@
 				TargetAttributes = {
 					1C92E5B81FC6E47300EF28C2 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 					1C92E5C11FC6E47300EF28C2 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -586,6 +586,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 1C92E5AF1FC6E47300EF28C2;
 			productRefGroup = 1C92E5BA1FC6E47300EF28C2 /* Products */;
@@ -895,7 +896,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -928,7 +929,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = in.skydev.Snap;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -950,7 +951,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -971,7 +972,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = in.skydev.SnapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

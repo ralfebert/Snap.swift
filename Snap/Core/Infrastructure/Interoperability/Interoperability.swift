@@ -3,7 +3,7 @@ import XCTest
 
 public extension XCTestCase {
   @objc
-  public func verify(view: UIView, function: String = #function, file: String = #file) {
+  func verify(view: UIView, function: String = #function, file: String = #file) {
     let testTarget = TestTarget(
       function: function,
       file: file
@@ -16,7 +16,7 @@ public extension XCTestCase {
   }
 
   @objc
-  public func verify(layer: CALayer, function: String = #function, file: String = #file) {
+  func verify(layer: CALayer, function: String = #function, file: String = #file) {
     let testTarget = TestTarget(
       function: function,
       file: file

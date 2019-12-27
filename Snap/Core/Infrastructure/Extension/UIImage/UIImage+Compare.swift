@@ -62,8 +62,6 @@ extension UIImage {
         throw CompareError.notEquals
     }
 
-
-    // TODO: image normalization removed: let imagesAreEqual = normalizedImage! == image.normalizedImage! && equals == 0
   }
   
   private func compareMetadata(from context1: CGContext, matches context2: CGContext) throws {

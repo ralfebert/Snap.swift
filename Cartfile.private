@@ -1,2 +1,2 @@
-github "mattgallagher/CwlPreconditionTesting" "master"
-github "mattgallagher/CwlCatchException" "master"
+github "mattgallagher/CwlPreconditionTesting" "xcode10"
+github "mattgallagher/CwlCatchException" "xcode10"
