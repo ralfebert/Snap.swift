@@ -1,4 +1,5 @@
 import XCTest
+@testable import Snap
 
 final class TestTargetSpec: XCTestCase {
   
@@ -12,36 +13,6 @@ final class TestTargetSpec: XCTestCase {
   override func tearDown() {
     environment = nil
     super.tearDown()
-  }
-  
-  func test_should_throw_assertion_if_environment_path_is_not_set() {
-    givenEnviromentIsNotSet()
-
-    let reference = givenTestTarget()
- 
-    assertThrowException() {
-      let _ = reference.reference(for: .reference).path
-    }
-  }
-  
-  func test_should_no_throw_if_environment_path_is_set() {
-    givenEnvironment()
-    
-    let reference = givenTestTarget()
-    
-    assertNoThrowException() {
-      let _ = reference.reference(for: .reference).path
-    }
-  }
-  
-  func test_should_throw_assertion_if_given_path_is_invalid() {
-    givenEnvironment(with: "invalid/path/")
-    
-    let reference = givenTestTarget()
-    
-    assertThrowException() {
-      let _ = reference.reference(for: .reference).path
-    }
   }
   
   func test_should_return_correct_path_for_test_target() {

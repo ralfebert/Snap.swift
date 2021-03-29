@@ -1,5 +1,6 @@
 import XCTest
 import UIKit
+@testable import Snap
 
 final class UIImageNormalizedSpec: XCTestCase {
   

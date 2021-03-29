@@ -8,7 +8,7 @@ enum FixtureType: String {
 
 struct Image {
   static func fixture(_ type: FixtureType = .tick, from: Any) -> UIImage {
-    let bundle = Bundle(for:object_getClass(from)!)
+    let bundle = Bundle.module
     return UIImage(named: type.rawValue, in: bundle, compatibleWith: nil)!
   }
 }

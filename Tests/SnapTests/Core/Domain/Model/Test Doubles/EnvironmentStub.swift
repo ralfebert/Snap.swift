@@ -1,4 +1,5 @@
 import Foundation
+@testable import Snap
 
 final class EnvironmentStub: Environment {
   var keys = [String: String]()

@@ -1,4 +1,5 @@
 import XCTest
+@testable import Snap
 
 final class UIImageCompareSpec: XCTestCase {
 
@@ -23,7 +24,7 @@ final class UIImageCompareSpec: XCTestCase {
 // MARK: - CompareError + Equatable
 
 extension CompareError: Equatable {
-  static func ==(lhs: CompareError, rhs: CompareError) -> Bool {
+  public static func ==(lhs: CompareError, rhs: CompareError) -> Bool {
     switch (lhs, rhs) {
     case (.invalidImageSize, .invalidImageSize),
         (.notEquals, .notEquals),
